@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.baharudin.pengaduanapp.ui.home.HomeViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montserrat_alternates_medium"
+                android:text="@string/welcome"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_pelapor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/montserrat_alternates_medium"
+                android:text="Pelapor"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/tv_war"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_alternates_medium"
+                android:text="nama terlapor sangat terjaga kerahasiaanya"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_pelapor"
+                app:layout_constraintTop_toBottomOf="@id/tv_pelapor" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_nama_pelapor"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_war">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_ed_nama_pelapor"
+                    android:layout_width="match_parent"
+                    android:hint="Nama Pelapor"
+                    android:text="@={viewModel.nama}"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_alamat_pelapor"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_nama_pelapor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_ed_alamat_pelapor"
+                    android:layout_width="match_parent"
+                    android:hint="Alamat"
+                    android:text="@={viewModel.address}"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_telp_pelapor"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_alamat_pelapor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_ed_telp_pelapor"
+                    android:layout_width="match_parent"
+                    android:text="@={viewModel.phone}"
+                    android:hint="No Telp"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/war2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_alternates_medium"
+                android:text="* Wajib Diisi"
+                android:textSize="15sp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@+id/text_telp_pelapor"
+                app:layout_constraintTop_toBottomOf="@+id/text_telp_pelapor" />
+
+            <TextView
+                android:id="@+id/tv_terlapor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_alternates_medium"
+                android:text="Terlapor"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/war2" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_nama_terlapor"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_terlapor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_ed_nama_terlapor"
+                    android:layout_width="match_parent"
+                    android:text="@={viewModel.reported}"
+                    android:hint="Nama Terlapor"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_satuan_kerja"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_nama_terlapor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_ed_satuan_kerja"
+                    android:layout_width="match_parent"
+                    android:text="@={viewModel.workUnit}"
+                    android:hint="Satuan Kerja"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_war3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_alternates_medium"
+                android:text="nama terlapor sangat terjaga kerahasiaanya"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/tv_pelapor"
+                app:layout_constraintTop_toBottomOf="@id/text_satuan_kerja" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:id="@+id/text_deskripsi"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Deskripsi Pelanggaran"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_war3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_ed_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@={viewModel.deed}"
+                    android:gravity="top"
+                    android:lines="5" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/image_photo"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:background="@drawable/stroke_image"
+                android:onClick="@{() -> viewModel.openImagePicker(1000)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_deskripsi">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingHorizontal="4dp"
+                    android:text="Upload Terlapor"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imv_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/btn_submit"
+                android:onClick="@{()-> viewModel.submitReport()}"
+                android:layout_marginTop="20dp"
+                android:text="Laporkan"
+                app:cornerRadius="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_photo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
