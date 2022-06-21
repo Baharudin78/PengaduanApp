@@ -17,6 +17,7 @@ class CustomSplashActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             val intentHome = Intent(this, HomeActivity::class.java)
             startActivity(intentHome)
-        }, 1000)
+            finishAffinity()
+        }, 2000)
     }
 }

@@ -4,9 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/stroke_image.xml" value="0.1245" />
-        <entry key="app/src/main/res/layout/activity_custom_splash.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_custom_splash.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_succes.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/activity_succes.xml" value="0.19" />
       </map>
     </option>
   </component>
