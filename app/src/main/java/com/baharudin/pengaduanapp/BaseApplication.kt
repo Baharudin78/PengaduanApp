@@ -17,7 +17,7 @@ class BaseApplication : Application() {
         CommonProvider.init(BR.viewModel)
         DataProvider.init(
             this, DataConfiguration(
-                remoteHost = "https://masyarakat-pengaduan.herokuapp.com/",
+                remoteHost = "https://pengaduan-masyarakat.my.id/",
                 remoteTimeout = 60L
             )
         )
